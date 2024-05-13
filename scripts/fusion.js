@@ -5,14 +5,14 @@ $.msg($.name, 'test');
 async function getToken() {
   try {
     let currentToken = $.request.headers.token || $.request.headers.Token;
-    $.msg(name, "", currentToken);
+    $.msg(name, currentToken);
   } catch (err) {
     $.logger.error(`获取token异常，${err}`);
   }
 }
 
 (async () => {
-  await getToken();
+  getToken();
   $.done();
 })();
 
