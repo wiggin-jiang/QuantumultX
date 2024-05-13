@@ -1,10 +1,10 @@
 const name = "获取丰声token";
-const $ = new Env('建行生活');
+const $ = new Env(name);
 
 $.msg($.name, 'test');
 async function getToken() {
   try {
-    let currentToken = $.request.headers.token || $.request.headers.Token;
+    let currentToken = $.token;
     $.msg(name, currentToken);
   } catch (err) {
     $.logger.error(`获取token异常，${err}`);
