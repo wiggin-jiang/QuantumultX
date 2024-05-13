@@ -1,6 +1,6 @@
 const scriptName = "获取丰声token";
-
-async function getWebOrAppCookie() {
+$.notification.post(scriptName, "", "test");
+async function getToken() {
   try {
     let currentToken = $.request.headers.token || $.request.headers.Token;
     $.notification.post(scriptName, "", currentToken);
@@ -10,6 +10,6 @@ async function getWebOrAppCookie() {
 }
 
 (async () => {
-  await getWebOrAppCookie();
+  await getToken();
   $.done();
 })();
