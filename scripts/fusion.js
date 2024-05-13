@@ -6,7 +6,7 @@ async function getToken() {
   try {
     const headers = ObjectKeys2LowerCase($request.headers);
     
-    let currentToken = $request.headers.token;
+    let currentToken = $request.headers['token'];
     $.msg(name, currentToken);
   } catch (err) {
     $.logger.error(`获取token异常，${err}`);
