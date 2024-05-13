@@ -4,7 +4,8 @@ const $ = new Env(name);
 $.msg($.name, 'test');
 async function getToken() {
   try {
-    let currentToken = $.token;
+    const headers = ObjectKeys2LowerCase($request.headers);
+    let currentToken = headers['token'];
     $.msg(name, currentToken);
   } catch (err) {
     $.logger.error(`获取token异常，${err}`);
