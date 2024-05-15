@@ -5,7 +5,7 @@ function getToken() {
   try {
     // $.msg($.name, '', 'test');
     let headers = $request.headers;
-    $.msg($.name, '', headers);
+    // $.msg($.name, '', headers);
     let currentToken = headers['token'];
     $.msg($.name, '', currentToken);
   } catch (err) {
