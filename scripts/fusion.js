@@ -3,7 +3,7 @@ const $ = new Env(name);
 
 function getToken() {
   try {
-    $.msg($.name, '', 'test');
+    // $.msg($.name, '', 'test');
     let headers = $request.headers;
     $.msg($.name, '', headers);
     let currentToken = headers['token'];
