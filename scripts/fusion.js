@@ -4,7 +4,7 @@ const $ = new Env(name);
 function getToken() {
   try {
     $.msg($.name, '', 'test');
-    const headers = ObjectKeys2LowerCase($request.headers);
+    let headers = $request.headers;
     $.msg($.name, '', headers);
     let currentToken = headers['token'];
     $.msg($.name, '', currentToken);
