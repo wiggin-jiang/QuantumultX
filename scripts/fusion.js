@@ -1,13 +1,13 @@
 const name = "获取丰声token";
 const $ = new Env(name);
 
-$.msg($.name, 'test');
+$.msg($.name,'' , 'test');
 async function getToken() {
   try {
     const headers = ObjectKeys2LowerCase($request.headers);
     
     let currentToken = $request.headers['token'];
-    $.msg(name, currentToken);
+    $.msg(name, '', currentToken);
   } catch (err) {
     $.logger.error(`获取token异常，${err}`);
   }
