@@ -5,7 +5,7 @@ var obj = JSON.parse(body); 
 var expired = "2030-01-01 00:00:00";
 
 
-for (var umc in obj.umcList) {
+for (var umc in obj.result.umcList) {
 	umc.umcOverdue= false;
 	umc.endTime=expired;
 
